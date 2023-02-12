@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Remote;
 using System;
@@ -22,7 +23,9 @@ namespace Specflow_Selenium_PO_Example2.Utils
         [BeforeScenario("web")]
         public void BeforeWebScenario()
         {
-                driver = new FirefoxDriver();
+            driver = new ChromeDriver();
+            driver.Manage().Window.Maximize();
+
                 ScenarioContext.Current["driver"] = driver;          
 
         }
