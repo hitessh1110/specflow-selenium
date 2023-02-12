@@ -8,9 +8,7 @@
 + utilises Page Object Model pattern
 + takes screenshots on failure of web tests
 
-## Background reading: 
-* Getting started with Specflow: http://ralucasuditu-softwaretesting.blogspot.co.uk/2015/06/write-your-first-test-with-specflow-and.html?m=1
-* How the framework is organised and what is currently being considered for inclusion ![alt tag](https://github.com/markwinspear/specflow-selenium-framework/blob/master/Specflow_Selenium_PO_Example2/Test_Automation_Framework.vsdx)
+
 
 ##Getting started
 1. Install Visual Studio (Enterprise 2015)
@@ -25,23 +23,22 @@
   * Selenuium http://nugetmusthaves.com/Tag/selenium
   * Selenium support package 
   
-7. Create folder 'dependencies'.  Download chrome, IE, Edge drivers directly here via NuGet packages 
+5. Create folder 'dependencies'.  Download chrome, IE, Edge drivers directly here via NuGet packages 
   * Right click on the chromedriver.exe and select Properties
   * Ensure the Build Action Content is selected  Copy to Output Directory Copy Always has been selected. 
   * This will ensure that chromedriver.exe is always in the folder of the running assembly so it can be used.
 
-8. As part of the NuGet installs,  you will notice that an App.config file was generated in the structure of the project. 
+6. As part of the NuGet installs,  you will notice that an App.config file was generated in the structure of the project. 
 -- If we chosen to use MSTest instead of NUnit as a test runner, we need to update this file.
 -- Add line  <unitTestProvider name="MsTest.2015" />
 -- For now, keep as nunit or specrun (if installed)
 
-9. In Visual Studio, select Tools > Extensions and Updates > Online.  Install SpecFlow extension and restart VS
+7. In Visual Studio, select Tools > Extensions and Updates > Online.  Install SpecFlow extension and restart VS
 
-10. Create a new SpecFlow feature by right-clicking on the project name --> Add --> New Item --> Visual C# Items --> SpecFlow Feature File. Name the feature
+8. Create a new SpecFlow feature by right-clicking on the project name --> Add --> New Item --> Visual C# Items --> SpecFlow Feature File. Name the feature
 
-11. Follow these steps: http://ralucasuditu-softwaretesting.blogspot.co.uk/2015/06/write-your-first-test-with-specflow-and.html?m=1
 
-12. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc
+9. Install SpecRun (NuGet) for enhanced reporting and IDE intellisense, formatting etc
 -- As per http://tech.opentable.co.uk/blog/2013/06/07/getting-started-with-specrun/
 -- Change Execution "stopAfterFailures" attribute to 0 else will retry tests three times, this 
 -- will also tell SpecRun not to stop after any failures and continue.
